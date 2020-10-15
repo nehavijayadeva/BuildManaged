@@ -40,7 +40,7 @@ public class medical {
 	Select gender=new Select(driver.findElement(By.id("form_sex")));
 	gender.selectByVisibleText("Female");
 	//driver.findElement(By.id("form_drivers_license")).sendKeys("1234567");
-	Select maritalstatus=new Select(driver.findElement(By.id("form_status")));
+	//Select maritalstatus=new Select(driver.findElement(By.id("form_status")));
 	maritalstatus.selectByVisibleText("Married");
 	driver.findElement(By.id("create")).click();
 	driver.switchTo().defaultContent();
