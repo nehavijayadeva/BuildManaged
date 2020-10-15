@@ -17,12 +17,14 @@ public class medical {
 		
 
 		WebDriverManager.chromedriver().setup();
+		
+		
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	driver.get("http:\\demo.openemr.io/a/openemr");
-	driver.findElement(By.id("authUser")).sendKeys("admin");
-	driver.findElement(By.id("clearPass")).sendKeys("pass");
+	 driver.get("http:\\demo.openemr.io/a/openemr");
+	 driver.findElement(By.id("authUser")).sendKeys("admin");
+	 driver.findElement(By.id("clearPass")).sendKeys("pass");
 	driver.findElement(By.xpath("//*[@id=\"login_form\"]/div[3]/div[1]/div[5]/button")).click();
 	Actions act=new Actions(driver);
 	act.moveToElement(driver.findElement(By.xpath("//*[@id=\"menu_logo\"]/div/div/span[5]/div/div"))).perform();
@@ -37,7 +39,7 @@ public class medical {
 	driver.findElement(By.id("form_pubpid")).sendKeys("123");
 	Select gender=new Select(driver.findElement(By.id("form_sex")));
 	gender.selectByVisibleText("Female");
-	driver.findElement(By.id("form_drivers_license")).sendKeys("1234567");
+	//driver.findElement(By.id("form_drivers_license")).sendKeys("1234567");
 	Select maritalstatus=new Select(driver.findElement(By.id("form_status")));
 	maritalstatus.selectByVisibleText("Married");
 	driver.findElement(By.id("create")).click();
